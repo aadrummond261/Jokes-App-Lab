@@ -1,0 +1,126 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #ff6ec4, #7873f5, #4ade80);
+  background-size: 300% 300%;
+  animation: bgShift 10s ease infinite;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 16px;
+  text-shadow: 3px 3px 0 #ffb703;
+  letter-spacing: 1px;
+}
+
+button {
+  padding: 14px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #ffbe0b, #fb5607);
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-bottom: 20px;
+  box-shadow: 0 6px 0 #c94c00;
+}
+
+button:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+button:active {
+  transform: translateY(1px);
+  box-shadow: 0 3px 0 #c94c00;
+}
+
+button:disabled {
+  background: #bdbdbd;
+  box-shadow: none;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.joke-card {
+  background: linear-gradient(145deg, #ffffff, #ffe8f7);
+  color: #222;
+  padding: 28px;
+  border-radius: 24px;
+  max-width: 460px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  border: 4px solid #ffffff;
+  border-left: 6px solid #ff006e;
+  animation: popIn 0.4s ease;
+}
+
+.setup {
+  font-size: 1.35rem;
+  margin-bottom: 14px;
+  font-weight: bold;
+  color: #8338ec;
+}
+
+.punchline {
+  font-size: 1.15rem;
+  color: #ff006e;
+  font-weight: 600;
+}
+
+.counter {
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 8px 14px;
+  border-radius: 999px;
+  color: #fff;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  box-shadow: 0 6px 14px rgba(0, 114, 255, 0.35);
+  margin-bottom: 20px;
+}
+
+.loading {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #fffbea;
+  text-shadow: 1px 1px 0 #ff006e;
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.85) rotate(-2deg);
+  }
+  70% {
+    transform: scale(1.03) rotate(1deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+}
+
+@keyframes bgShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
